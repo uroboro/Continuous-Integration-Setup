@@ -4,6 +4,8 @@ env:
  - THEOS=theos
 
 before_script:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install dpkg ldid; fi
  - git clone --recursive https://github.com/theos/theos.git
 
 script:
@@ -19,7 +21,3 @@ compiler:
   - clang
 
 osx_image: xcode7.2
-
-before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install dpkg ldid; fi

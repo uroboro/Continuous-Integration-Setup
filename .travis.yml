@@ -16,7 +16,11 @@ sudo: false
 os:
   - linux
   - osx
-    osx_image: xcode7.2
 
 compiler:
   - clang
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode7.2

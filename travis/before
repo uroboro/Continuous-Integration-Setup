@@ -1,0 +1,26 @@
+#!/bin/sh
+
+main() {
+	argc=$#
+	argv=($@)
+
+	for (( i = 0; i < $argc; i++ )); do
+		#echo "argv[$i] = ${argv[$i]}"
+	done
+
+	case "$TRAVIS_OS_NAME" in
+
+	osx)
+		brew update;
+		brew install dkpg ldid;
+		;;
+
+	linux)
+		;;
+
+	esac
+
+	git clone --recursive https://github.com/theos/theos.git
+}
+
+main $0 $@

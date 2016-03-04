@@ -11,7 +11,7 @@ main() {
 
 	osx)
 		brew update;
-		brew install dkpg ldid;
+		brew install dpkg ldid;
 		;;
 
 	linux)

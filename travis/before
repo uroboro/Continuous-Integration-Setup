@@ -1,12 +1,11 @@
 #!/bin/sh
 
 main() {
-	argc=$#
-	argv=($@)
-
-	for (( i = 0; i < $argc; i++ )); do
+	#argc=$#
+	#argv=($@)
+	#for (( i = 0; i < $argc; i++ )); do
 		#echo "argv[$i] = ${argv[$i]}"
-	done
+	#done
 
 	case "$TRAVIS_OS_NAME" in
 
@@ -19,8 +18,6 @@ main() {
 		;;
 
 	esac
-
-	git clone --recursive https://github.com/theos/theos.git
 }
 
 main $0 $@

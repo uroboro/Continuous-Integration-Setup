@@ -1,9 +1,10 @@
 language: generic
 
 env:
- - THEOS=theos
+  - THEOS=theos
 
 before_script:
+  - git clone --recursive https://github.com/theos/theos.git
   - ./travis/before
 
 script:

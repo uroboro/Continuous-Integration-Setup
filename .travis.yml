@@ -8,7 +8,7 @@ before_script:
   - ./travis/before
 
 script:
- - make
+ - make test
 
 sudo: false
 

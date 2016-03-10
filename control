@@ -1,0 +1,9 @@
+Package: com.uroboro.travis-ci.test
+Name: Travis-CI Test
+Description: A Travis-CI test project!
+Version: 0.0.1
+Priority: optional
+Section: Tool
+Architecture: iphoneos-arm
+Maintainer: uroboro <uroboro845@gmail.com>
+Author: uroboro <uroboro845@gmail.com>

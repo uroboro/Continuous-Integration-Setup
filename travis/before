@@ -16,7 +16,7 @@ main() {
 
 	linux)
 		curl -L https://jbdevs.org/sdks/dl/iPhoneOS8.1.sdk.tbz2 | tar -jxf - -C $THEOS/sdks/
-		curl -L https://jbdevs.org/sdks/dl/toolchain.zip | unzip - -d $THEOS/toolchain/
+		wget https://jbdevs.org/sdks/dl/toolchain.zip -O temp.zip; unzip temp.zip -d $THEOS/toolchain/; rm temp.zip
 		;;
 
 	esac

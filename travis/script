@@ -11,6 +11,8 @@ main() {
 	make
 	echo "Doing 'make test'"
 	make test
+	echo "Doing 'make package'"
+	make package
 }
 
 main $0 $@

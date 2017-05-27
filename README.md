@@ -1,3 +1,3 @@
-# Travis-Tests: *Testing various capabilities of Travis-CI*
+# Continuous-Integration-Setup: *CI setups for Theos projects*
 
-[![Travis Status](https://travis-ci.org/uroboro/Travis-Tests.svg)](https://travis-ci.org/uroboro/Travis-Tests)
+[![Travis Status](https://travis-ci.org/uroboro/Continuous-Integration-Setup.svg)](https://travis-ci.org/uroboro/Continuous-Integration-Setup)

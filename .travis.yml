@@ -4,10 +4,20 @@ os:
 
 dist: trusty
 sudo: required
-osx_image: xcode7.2
+osx_image: xcode7.3.1
 
 env:
-  - THEOS=$PWD/theos
+  global:
+    - THEOS=theos
+  
+  matrix:
+    #Popular libraries (http://iphonedevwiki.net/index.php/Open_Source_Projects#Developer_libraries)
+    - TEST_REPO=https://github.com/DHowett/preferenceloader
+    - TEST_REPO=https://github.com/rpetrich/RocketBootstrap
+    - TEST_REPO=https://github.com/a3tweaks/Flipswitch
+    - TEST_REPO=https://github.com/rpetrich/AppList
+    - TEST_REPO=https://github.com/Xuzz/WeeLoader
+    - TEST_REPO=https://github.com/Xuzz/IconSupport
 
 before_script:
   - git clone --recursive https://github.com/theos/theos.git

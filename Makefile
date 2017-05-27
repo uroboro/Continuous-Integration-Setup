@@ -9,4 +9,3 @@ include $(THEOS_MAKE_PATH)/tool.mk
 
 test: $(TOOL_NAME)
 	@file $(THEOS_OBJ_DIR)/$(TOOL_NAME)
-	@$(THEOS_OBJ_DIR)/$(TOOL_NAME)

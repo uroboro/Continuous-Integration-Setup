@@ -12,12 +12,12 @@ env:
   
   matrix:
     #Popular libraries (http://iphonedevwiki.net/index.php/Open_Source_Projects#Developer_libraries)
-    - TEST_REPO=https://github.com/DHowett/preferenceloader
-    - TEST_REPO=https://github.com/rpetrich/RocketBootstrap
-    - TEST_REPO=https://github.com/a3tweaks/Flipswitch
-    - TEST_REPO=https://github.com/rpetrich/AppList
-    - TEST_REPO=https://github.com/Xuzz/WeeLoader
-    - TEST_REPO=https://github.com/Xuzz/IconSupport
+    - TEST_REPO=DHowett/preferenceloader
+    - TEST_REPO=rpetrich/RocketBootstrap
+    - TEST_REPO=a3tweaks/Flipswitch
+    - TEST_REPO=rpetrich/AppList
+    - TEST_REPO=Xuzz/WeeLoader
+    - TEST_REPO=Xuzz/IconSupport
 
 before_script:
   - git clone --recursive https://github.com/theos/theos.git

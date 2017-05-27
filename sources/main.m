@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-#define PRINT(x, y) { \
-	printf(#x " = { "); \
-	for (int i = 0; x[i]; i++) { y(x[i], x[i+1] != NULL); } \
-	printf("}\n"); \
-	}
-
 int main(int argc, char **argv, char **envp) {
-	void (^myBlock)(char *, int) = ^(char *str, int i) {
-		printf("%s%c ", str, i?',':0);
+	printf("argv: ");
+	for (int i = 0; i < argc; i++) {
+		printf("%s", argv[i]);
+		if (i < argc - 1) {
+			printf(", ");
+		}
 	};
 
-	PRINT(argv, myBlock);
-	PRINT(envp, myBlock);
+	printf("envp: ");
+	for (int i = 0; envp[i]; i++) {
+		printf("%s\n", envp[i]);
+	};
 
 	return 0;
 }

@@ -11,7 +11,8 @@ main() {
 
 	osx)
 		brew update;
-		brew install dpkg ldid;
+		brew install fakeroot ldid;
+		brew install --force-bottle https://raw.githubusercontent.com/Homebrew/homebrew-core/7a4dabfc1a2acd9f01a1670fde4f0094c4fb6ffa/Formula/dpkg.rb  # install dpkg as a bottle from the old commit
 		;;
 
 	linux)

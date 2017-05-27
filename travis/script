@@ -13,6 +13,28 @@ main() {
 	make test
 	echo "Doing 'make package'"
 	make package
+		
+	if [[ -z $TEST_REPO ]]; then
+		echo "The repo env var is missing." >&2
+		exit 1
+	fi
+
+	# create a directory
+	TEMP_DIR=$(mktemp -d)
+	pushd $TEMP_DIR
+
+	# download and extract the repo
+	curl -fsSL https://github.com/$TEST_REPO/tarball/master | tar -xz --strip-components=1
+
+	# some of the test repos still use a theos symlink
+	ln -s $THEOS theos
+
+	# build!
+	make package messages=yes
+
+	# go up to the parent dir and remove this test dir
+	popd
+	rm -rf $(basename $TEMP_DIR)
 }
 
 main $0 $@

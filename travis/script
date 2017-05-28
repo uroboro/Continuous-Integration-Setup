@@ -28,6 +28,7 @@ main() {
 
 	# some of the test repos still use a theos symlink
 	ln -s $THEOS theos
+	ln -s $THEOS framework
 
 	# build!
 	make package messages=yes
